@@ -4,9 +4,6 @@ date: 2024-07-10
 summary: "Wave-variable passivity and predictor-based control for stable human-in-the-loop F1TENTH teleoperation with communication delay."
 tags: [Control Systems, Robotics, Hardware, Teleoperation]
 tech_stack: [MATLAB, Simulink, ROS, F1TENTH, NVIDIA Jetson]
-links:
-  - {type: github, url: "https://github.com/sridharsidhu0801/teleop-wv-under-delay", label: "Public Repository"}
-  - {type: external, url: "https://ieeexplore.ieee.org/document/10644849", label: "ACC 2024 Paper"}
 featured: true
 status: "Published — ACC 2024"
 role: "Researcher and controls developer"
@@ -26,3 +23,5 @@ This work addresses bilateral vehicle teleoperation when network delay can desta
 - Connected the research repository to the companion hardware-launch and ROS-node repository.
 
 The resulting work was published at the 2024 American Control Conference.
+
+[View the public repository](https://github.com/sridharsidhu0801/teleop-wv-under-delay) · [Read the ACC 2024 paper](https://ieeexplore.ieee.org/document/10644849)
