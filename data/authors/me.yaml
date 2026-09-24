@@ -1,0 +1,111 @@
+schema: hugoblox/author/v1
+slug: me
+is_owner: true
+name:
+  display: Sridhar Babu Mudhangulla
+  given: Sridhar Babu
+  family: Mudhangulla
+postnominals: []
+status:
+  icon: "🤖"
+role: Controls & Robotics Researcher
+email: sm19ch@fsu.edu
+bio: |
+  Controls and robotics researcher developing resilient, scalable, and delay-aware methods for networked autonomous systems. My work connects control theory with MATLAB/Simulink, ROS/ROS 2, and experiments on vehicles, mobile robots, and manipulators.
+
+affiliations:
+  - name: Resilient and Autonomous Systems Lab, Florida State University
+    url: https://raslab.engineering.fsu.edu/
+
+links:
+  - icon: at-symbol
+    url: mailto:sm19ch@fsu.edu
+    label: Email
+  - icon: brands/github
+    url: https://github.com/sridharsidhu0801
+  - icon: brands/linkedin
+    url: https://www.linkedin.com/in/sridhar-babu-mudhangulla-877034124/
+  - icon: academicons/google-scholar
+    url: https://scholar.google.com/citations?hl=en&user=eJS_sekAAAAJ
+
+interests:
+  - Robust and Networked Control
+  - Multi-Agent Systems
+  - Vehicle and Robot Autonomy
+  - Teleoperation under Communication Delay
+  - Simulation-to-Hardware Validation
+
+education:
+  - degree: Ph.D. studies in Electrical and Computer Engineering — Controls & Robotics
+    institution: Florida State University
+    start: 2021-01-01
+    summary: Research in resilient and scalable coordination, formation control, and delayed teleoperation for autonomous systems.
+  - degree: M.S. Mechanical Engineering — Robotics
+    institution: Florida A&M University
+    start: 2019-08-01
+    end: 2021-05-31
+  - degree: B.Tech. and M.Tech. Mechanical Engineering
+    institution: Indian Institute of Technology Hyderabad
+    start: 2012-08-01
+    end: 2017-05-31
+
+experience:
+  - role: Research Assistant — Controls & Robotics
+    org: Resilient and Autonomous Systems Lab, Florida State University
+    start: 2021-01-01
+    summary: |
+      Develop networked and multi-agent control methods for stability, scalability, formation, and teleoperation under communication delay. Move algorithms between MATLAB/Simulink, ROS/ROS 2, and vehicle or mobile-robot platforms while building reproducible validation workflows.
+    tags: [Robust Control, Multi-Agent Systems, MATLAB/Simulink, ROS 2]
+  - role: Research Assistant — Robotic Manipulation
+    org: Center for Intelligent Systems, Control, and Robotics, FAMU
+    start: 2019-08-01
+    end: 2021-01-31
+    summary: |
+      Developed pose and trajectory tracking for a 7-DOF SCHUNK LWA4D manipulator, integrating kinematics, Gazebo, ROS-Industrial, MoveIt, C++, and Python with the physical platform.
+    tags: [Robotic Manipulation, ROS-Industrial, MoveIt, Gazebo]
+  - role: Research Intern
+    org: Leap Robots LLP — Leap Labs R&D Center
+    start: 2018-08-01
+    end: 2019-07-31
+    summary: Built mobile-robot prototypes using Raspberry Pi, Arduino, Python, and Embedded C.
+    tags: [Mobile Robotics, Embedded Systems, Prototyping]
+  - role: Research Intern — Space Robotics
+    org: Robotics Laboratory, IIT Rajasthan
+    start: 2017-05-01
+    end: 2018-07-31
+    summary: |
+      Designed and tested dynamic-parameter estimation for a space-robot platform using ROS, including a reaction-wheel concept to reduce platform yaw error during manipulator motion.
+    tags: [Space Robotics, System Identification, ROS]
+
+skills:
+  - name: Control
+    items:
+      - label: Robust / Networked Control
+        level: 5
+      - label: Model Predictive Control
+        level: 4
+      - label: State Estimation
+        level: 4
+  - name: Robotics
+    items:
+      - label: ROS / ROS 2
+        level: 4
+      - label: MATLAB / Simulink
+        level: 5
+      - label: Mobile Robots & Vehicles
+        level: 4
+  - name: Programming
+    items:
+      - label: MATLAB
+        level: 5
+      - label: Python
+        level: 4
+      - label: C / C++
+        level: 3
+
+languages:
+  - name: English
+    level: 5
+    label: Professional
+
+awards: []
