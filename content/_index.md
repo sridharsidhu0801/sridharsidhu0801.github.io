@@ -43,6 +43,9 @@ sections:
       spacing:
         padding: ["4rem", "0", "4rem", "0"]
 
+  - block: hardware-reel
+    id: hardware-in-motion
+
   - block: tech-stack
     id: skills
     content:

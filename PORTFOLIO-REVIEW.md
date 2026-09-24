@@ -13,6 +13,15 @@ Prepared: 2026-09-23
 
 The next media pass can replace remaining research-plot thumbnails and add the owner's space-robot and project photographs without changing the content architecture.
 
+## Hardware archive integration
+
+- Reviewed the supplied hardware photo/video archive without changing the original ZIP.
+- Converted selected HEIC photographs to web-ready JPEGs.
+- Added authentic MicroNole/F1TENTH, QBot/NoleBot, autonomous go-kart, and SCHUNK imagery to the matching cards and slideshow scenes.
+- Added a dedicated space-robot dynamics and parameter-identification case study.
+- Added an optimized two-video hardware reel for coordinated QBot motion and the physical space-robot testbed.
+- Retained full-resolution source media outside the deployable portfolio; only optimized derivatives are included in the website.
+
 ## Positioning
 
 The portfolio presents Sridhar Babu Mudhangulla as a controls and robotics researcher who connects mathematical analysis to reproducible simulation, middleware, and physical platforms.
@@ -32,6 +41,7 @@ The portfolio presents Sridhar Babu Mudhangulla as a controls and robotics resea
 11. QBot3 / NoleBot mobile-robot platform
 12. TurtleBot3 Burger ROS 2 integration
 13. Moving-horizon resilient control under false-data attacks
+14. Space-robot dynamics and parameter identification
 
 ## Public-information policy
 
