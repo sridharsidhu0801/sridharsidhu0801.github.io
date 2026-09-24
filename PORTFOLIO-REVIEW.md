@@ -2,6 +2,17 @@
 
 Prepared: 2026-09-23
 
+## Current local visual revision
+
+- Added a four-scene hero slideshow using project-owned teleoperation, F1TENTH, QBot/NoleBot, and SCHUNK hardware imagery.
+- Synchronized each scene with an engineering caption describing the system shown.
+- Added dedicated F1TENTH/MicroNole, QBot3/NoleBot, TurtleBot3/ROS 2, and moving-horizon resilient-control case studies.
+- Replaced the DDWMR notes thumbnail with the three-QBot communication-topology image.
+- Replaced the general-graph performance plot thumbnail with a formation-graph diagram.
+- Kept all changes local; no remote repository or deployed website was updated.
+
+The next media pass can replace remaining research-plot thumbnails and add the owner's space-robot and project photographs without changing the content architecture.
+
 ## Positioning
 
 The portfolio presents Sridhar Babu Mudhangulla as a controls and robotics researcher who connects mathematical analysis to reproducible simulation, middleware, and physical platforms.
@@ -17,6 +28,10 @@ The portfolio presents Sridhar Babu Mudhangulla as a controls and robotics resea
 7. Autonomous go-kart modeling, drive-by-wire, and steer-by-wire
 8. Passive vehicle teleoperation under delay (ACC 2024)
 9. SCHUNK LWA4D manipulator control
+10. F1TENTH / MicroNole autonomous-vehicle platform
+11. QBot3 / NoleBot mobile-robot platform
+12. TurtleBot3 Burger ROS 2 integration
+13. Moving-horizon resilient control under false-data attacks
 
 ## Public-information policy
 

@@ -5,53 +5,26 @@ date: 2026-09-23
 type: landing
 
 sections:
-  - block: dev-hero
+  - block: portfolio-hero
     id: hero
     content:
       username: me
-      greeting: "Hello, I'm"
-      show_status: true
-      show_scroll_indicator: true
-      typewriter:
-        enable: true
-        prefix: "I engineer"
-        strings:
-          - "resilient multi-agent systems"
-          - "networked control under delay"
-          - "robot and vehicle autonomy"
-          - "simulation-to-hardware workflows"
-        type_speed: 60
-        delete_speed: 35
-        pause_time: 2400
-      cta_buttons:
-        - text: Explore My Work
-          url: "#projects"
-          icon: arrow-down
-        - text: Contact Me
-          url: "#contact"
-          icon: envelope
-    design:
-      style: centered
-      avatar_shape: circle
-      animations: true
-      background:
-        color:
-          light: "#f5f8fb"
-          dark: "#07111c"
-      spacing:
-        padding: ["6rem", "0", "4rem", "0"]
 
   - block: portfolio
     id: projects
     content:
-      title: "Research & Engineering"
-      subtitle: "Control theory carried through simulation, middleware, and physical platforms"
+      title: "Control, Robotics & Autonomous Systems"
+      subtitle: "Selected hardware platforms, engineering projects, and research programs—from modeling to physical validation"
       count: 0
       filters:
         folders: [projects]
       buttons:
         - name: All
           tag: '*'
+        - name: Engineering Projects
+          tag: Engineering Project
+        - name: Autonomous Vehicles
+          tag: Autonomous Vehicles
         - name: Control Systems
           tag: Control Systems
         - name: Multi-Agent Systems
