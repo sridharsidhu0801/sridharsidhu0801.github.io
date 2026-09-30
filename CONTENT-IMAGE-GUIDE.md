@@ -27,20 +27,30 @@ Recommended project-card image: landscape, 1600 × 900 pixels, JPG for photograp
 
 ## Hero slideshow
 
-The four slideshow assignments are defined in:
+The six slideshow assignments are defined in:
 
 `layouts/_partials/hbx/blocks/portfolio-hero/block.html`
 
-Current image files:
+Current image files and caption assignments:
 
-1. `static/media/hardware/teleoperation-cockpit-micronole.jpg`
-2. `static/media/hardware/f1tenth-micronole-fleet.jpg`
-3. `static/media/hardware/qbot-multi-agent-fleet.jpg`
-4. `static/media/hardware/schunk-lwa4d-lab.jpg`
+1. `static/media/hero/human-in-loop.png` - Human-in-the-loop vehicle teleoperation under communication delay
+2. `static/media/hero/scalable-mas-hardware.png` - Scalable multi-agent experiments spanning physical and virtual vehicles
+3. `static/media/hero/networked-mobile-robots.jpg` - Networked mobile robots coordinated through real-time distributed control
+4. `static/media/hero/schunk-manipulator.jpg` - Manipulator integration across control, communication, and hardware
+5. `static/media/hero/autonomous-go-kart.jpg` - Autonomous vehicle control from nonlinear modeling and NMPC to drive-by-wire integration
+6. `static/media/hero/f1tenth-autonomy.jpg` - F1TENTH autonomy combining ROS, NVIDIA Jetson, vehicle control, lane following, and traffic-sign perception
 
 Replace a file in place to keep its existing caption. If an image represents a different experiment, also update the corresponding `portfolio-hero__caption-item` text in the hero block.
 
 Recommended hero image: landscape, at least 1920 × 1080 pixels. Keep the most important subject in the center or right half because the name and introduction occupy the left side on desktop screens.
+
+### Recommended future hero additions from the resume
+
+This resume-supported addition remains available for a future rotation or a project-specific banner:
+
+1. **Space-robot dynamics and identification** - "Space-robot system identification with manipulator-induced base motion and reaction-wheel compensation"
+
+The hero is now at its recommended six-slide limit. Replace an existing slide rather than extending the rotation so recruiters can connect each caption to its image before the next experiment appears.
 
 ## Hardware in Motion
 
@@ -61,4 +71,3 @@ Two cards are currently active. A reusable card template and four recommended fu
 4. SCHUNK LWA4D trajectory tracking
 
 For each slot, add an MP4 video, add a JPG poster, duplicate the template card, and replace its filenames, title, and one-sentence description. Use short muted clips, H.264 MP4, 16:9 aspect ratio, and preferably less than 8 MB per clip.
-

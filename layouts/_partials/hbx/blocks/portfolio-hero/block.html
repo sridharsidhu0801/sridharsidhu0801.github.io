@@ -10,6 +10,8 @@
     <div class="portfolio-hero__slide portfolio-hero__slide--2"></div>
     <div class="portfolio-hero__slide portfolio-hero__slide--3"></div>
     <div class="portfolio-hero__slide portfolio-hero__slide--4"></div>
+    <div class="portfolio-hero__slide portfolio-hero__slide--5"></div>
+    <div class="portfolio-hero__slide portfolio-hero__slide--6"></div>
   </div>
   <div class="portfolio-hero__shade"></div>
 
@@ -23,6 +25,8 @@
       <span class="portfolio-hero__caption-item portfolio-hero__caption-item--2">Scalable multi-agent experiments spanning physical and virtual vehicles</span>
       <span class="portfolio-hero__caption-item portfolio-hero__caption-item--3">Networked mobile robots coordinated through real-time distributed control</span>
       <span class="portfolio-hero__caption-item portfolio-hero__caption-item--4">Manipulator integration across control, communication, and hardware</span>
+      <span class="portfolio-hero__caption-item portfolio-hero__caption-item--5">Autonomous vehicle control from nonlinear modeling and NMPC to drive-by-wire integration</span>
+      <span class="portfolio-hero__caption-item portfolio-hero__caption-item--6">F1TENTH autonomy combining ROS, NVIDIA Jetson, vehicle control, lane following, and traffic-sign perception</span>
     </div>
 
     <div class="portfolio-hero__actions">
@@ -42,31 +46,35 @@
 <style>
   .portfolio-hero { position: relative; min-height: 88vh; display: grid; place-items: center; overflow: hidden; color: #fff; background: #06101b; }
   .portfolio-hero__slides, .portfolio-hero__slide, .portfolio-hero__shade { position: absolute; inset: 0; }
-  .portfolio-hero__slide { opacity: 0; background-size: cover; background-position: center; animation: portfolioHero 28s infinite; transform: scale(1.035); }
-  .portfolio-hero__slide--1 { background-image: url('/media/hardware/teleoperation-cockpit-micronole.jpg'); animation-delay: 0s; }
-  .portfolio-hero__slide--2 { background-image: url('/media/hardware/f1tenth-micronole-fleet.jpg'); animation-delay: 7s; }
-  .portfolio-hero__slide--3 { background-image: url('/media/hardware/qbot-multi-agent-fleet.jpg'); animation-delay: 14s; }
-  .portfolio-hero__slide--4 { background-image: url('/media/hardware/schunk-lwa4d-lab.jpg'); animation-delay: 21s; }
+  .portfolio-hero__slide { opacity: 0; background-size: cover; background-position: center; animation: portfolioHero 42s infinite; transform: scale(1.035); }
+  .portfolio-hero__slide--1 { background-image: url('/media/hero/human-in-loop.png'); background-position: center; animation-delay: 0s; }
+  .portfolio-hero__slide--2 { background-image: url('/media/hero/scalable-mas-hardware.png'); background-position: center; animation-delay: 7s; }
+  .portfolio-hero__slide--3 { background-image: url('/media/hero/networked-mobile-robots.jpg'); background-position: center; animation-delay: 14s; }
+  .portfolio-hero__slide--4 { background-image: url('/media/hero/schunk-manipulator.jpg'); background-position: center 42%; animation-delay: 21s; }
+  .portfolio-hero__slide--5 { background-image: url('/media/hero/autonomous-go-kart.jpg'); background-position: center 58%; animation-delay: 28s; }
+  .portfolio-hero__slide--6 { background-image: url('/media/hero/f1tenth-autonomy.jpg'); background-position: center 48%; animation-delay: 35s; }
   .portfolio-hero__shade { background: linear-gradient(90deg, rgba(3,10,18,.70) 0%, rgba(3,10,18,.48) 47%, rgba(3,10,18,.16) 100%), linear-gradient(0deg, rgba(3,10,18,.52), transparent 55%); }
   .portfolio-hero__content { position: relative; z-index: 2; width: min(1180px, calc(100% - 2rem)); padding: 7rem 1rem 5rem; }
   .portfolio-hero__eyebrow { color: #7dd3fc; font: 700 .82rem/1.4 ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .15em; text-transform: uppercase; margin-bottom: 1.2rem; }
   .portfolio-hero h1 { max-width: 870px; margin: 0; font-size: clamp(3rem, 8vw, 6.7rem); line-height: .94; letter-spacing: -.055em; text-wrap: balance; text-shadow: 0 4px 32px rgba(0,0,0,.55); }
   .portfolio-hero__lead { max-width: 760px; margin: 1.6rem 0 1.3rem; color: #e2e8f0; font-size: clamp(1.08rem, 2vw, 1.4rem); line-height: 1.6; }
   .portfolio-hero__caption { position: relative; min-height: 3rem; max-width: 760px; margin-bottom: 1.7rem; color: #bae6fd; font-weight: 650; }
-  .portfolio-hero__caption-item { position: absolute; inset: 0 auto auto 0; opacity: 0; animation: portfolioCaption 28s infinite; }
+  .portfolio-hero__caption-item { position: absolute; inset: 0 auto auto 0; opacity: 0; animation: portfolioCaption 42s infinite; }
   .portfolio-hero__caption-item::before { content: ''; display: inline-block; width: 2.5rem; height: 2px; margin: 0 .75rem .28rem 0; background: #38bdf8; }
   .portfolio-hero__caption-item--1 { animation-delay: 0s; }
   .portfolio-hero__caption-item--2 { animation-delay: 7s; }
   .portfolio-hero__caption-item--3 { animation-delay: 14s; }
   .portfolio-hero__caption-item--4 { animation-delay: 21s; }
+  .portfolio-hero__caption-item--5 { animation-delay: 28s; }
+  .portfolio-hero__caption-item--6 { animation-delay: 35s; }
   .portfolio-hero__actions { display: flex; flex-wrap: wrap; gap: .85rem; margin-bottom: 2rem; }
   .portfolio-hero__button { display: inline-flex; align-items: center; min-height: 3rem; padding: .75rem 1.3rem; border: 1px solid rgba(255,255,255,.36); border-radius: 999px; color: #fff; font-weight: 700; text-decoration: none; backdrop-filter: blur(10px); background: rgba(15,23,42,.4); transition: transform .2s ease, background .2s ease; }
   .portfolio-hero__button:hover { transform: translateY(-2px); background: rgba(30,41,59,.75); }
   .portfolio-hero__button--primary { border-color: #38bdf8; background: #0284c7; }
   .portfolio-hero__signals { display: flex; flex-wrap: wrap; gap: .6rem; color: #cbd5e1; font-size: .82rem; }
   .portfolio-hero__signals span { padding: .35rem .7rem; border: 1px solid rgba(148,163,184,.32); border-radius: .4rem; background: rgba(2,6,23,.45); }
-  @keyframes portfolioHero { 0% { opacity: 0; transform: scale(1.045); } 4%, 23% { opacity: 1; } 27%, 100% { opacity: 0; transform: scale(1.005); } }
-  @keyframes portfolioCaption { 0%, 28% { opacity: 0; transform: translateY(8px); } 4%, 23% { opacity: 1; transform: translateY(0); } }
+  @keyframes portfolioHero { 0% { opacity: 0; transform: scale(1.045); } 2%, 14.5% { opacity: 1; } 16.7%, 100% { opacity: 0; transform: scale(1.005); } }
+  @keyframes portfolioCaption { 0%, 16.7% { opacity: 0; transform: translateY(8px); } 2%, 14.5% { opacity: 1; transform: translateY(0); } }
   @media (max-width: 700px) {
     .portfolio-hero { min-height: 82vh; }
     .portfolio-hero__shade { background: linear-gradient(0deg, rgba(3,10,18,.78) 0%, rgba(3,10,18,.48) 75%, rgba(3,10,18,.28) 100%); }
