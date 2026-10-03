@@ -34,7 +34,7 @@ The six slideshow assignments are defined in:
 Current image files and caption assignments:
 
 1. `static/media/hero/human-in-loop.png` - Human-in-the-loop vehicle teleoperation under communication delay
-2. `static/media/hero/scalable-mas-hardware.png` - Scalable multi-agent experiments spanning physical and virtual vehicles
+2. `static/media/hero/scalable-mas-hardware.jpg` - Scalable multi-agent experiments spanning physical and virtual vehicles
 3. `static/media/hero/networked-mobile-robots.jpg` - Networked mobile robots coordinated through real-time distributed control
 4. `static/media/hero/schunk-manipulator.jpg` - Manipulator integration across control, communication, and hardware
 5. `static/media/hero/autonomous-go-kart.jpg` - Autonomous vehicle control from nonlinear modeling and NMPC to drive-by-wire integration
