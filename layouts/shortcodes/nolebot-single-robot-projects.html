@@ -8,14 +8,14 @@
   <div class="nolebot-work__grid">
     <article class="nolebot-card">
       <div class="nolebot-card__media nolebot-card__media--video">
-        {{- $pathVideo := .Page.Resources.GetMatch "path-tracking/attack-wmr-figure8-web.mp4" -}}
+        {{- $pathVideo := .Page.Resources.GetMatch "path-tracking/figure8-path-tracking-web.mp4" -}}
         {{- if $pathVideo }}
           <video controls playsinline preload="metadata" aria-label="Figure-eight wheeled-mobile-robot path-tracking experiment">
             <source src="{{ $pathVideo.RelPermalink }}" type="video/mp4">
             Your browser does not support embedded MP4 video.
           </video>
         {{- end }}
-        <span>Figure-eight path-tracking experiment · 60 s</span>
+        <span>Figure-eight path-tracking experiment · 18 s</span>
       </div>
       <div class="nolebot-card__body">
         <div class="nolebot-card__number">01</div>
