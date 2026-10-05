@@ -1,18 +1,23 @@
 ---
 title: "QBot3 / NoleBot Mobile Robotics Platform"
 date: 2026-09-09
-summary: "Mobile-robot engineering across platform calibration, go-to-goal motion, SLAM, navigation, and multi-robot experimental support."
+lastmod: 2026-10-05
+summary: "Single-robot engineering across DDWMR modeling, path tracking, SLAM, autonomous navigation, and teleoperation."
 tags: [Robotics, Hardware, Engineering Project, Autonomous Vehicles]
 tech_stack: [QBot3, ROS, RViz, MATLAB, Simulink, Python]
 featured: true
 status: "Reusable platform project"
 role: "Robotics and controls developer"
 highlights:
-  - "Robot bring-up and motion experiments"
-  - "Mapping, localization, and navigation workflows"
-  - "Hardware foundation for cooperative-control studies"
+  - "Straight-line, circular, and figure-eight path tracking"
+  - "DDWMR modeling and controller-development foundation"
+  - "SLAM, navigation, obstacle avoidance, and teleoperation"
 ---
 
-The NoleBot/QBot3 platform project collects the reusable engineering work required before a research controller can be tested on real mobile robots. The work includes platform experiments, gain and motion checks, mapping and navigation evidence, hardware media, and retained integration notes.
+The NoleBot/QBot3 platform project collects the reusable engineering work developed and tested with one differential-drive mobile robot. It connects mathematical modeling and motion control with ROS-based mapping, navigation, and hands-on operation of the physical platform.
 
-Research-specific DDWMR, CACC, mesh-stability, and teleoperation results remain in their corresponding research programs; this project represents the practical robot foundation shared by those efforts.
+The main image shows the physical robot and its onboard computing, power, and sensing integration. The project modules below separate the major single-robot capabilities so their simulation results, plots, photographs, and short experiment videos can be added as the media is reviewed.
+
+{{< nolebot-single-robot-projects >}}
+
+> **Project boundary:** This page covers work performed with one NoleBot/QBot3. Multi-robot formation control, cooperative adaptive cruise control, and other coordinated NoleBot experiments will be presented separately.

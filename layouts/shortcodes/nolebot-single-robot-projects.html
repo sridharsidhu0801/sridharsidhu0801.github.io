@@ -1,0 +1,134 @@
+<section class="nolebot-work" aria-labelledby="nolebot-work-title">
+  <header class="nolebot-work__header">
+    <p class="nolebot-work__eyebrow">Single-robot engineering</p>
+    <h2 id="nolebot-work-title">Projects Built on the NoleBot Platform</h2>
+    <p>Four focused projects that progress from modeling and motion control to autonomous navigation and human-operated mobility.</p>
+  </header>
+
+  <div class="nolebot-work__grid">
+    <article class="nolebot-card">
+      <div class="nolebot-card__media nolebot-card__media--path" role="img" aria-label="Placeholder for NoleBot straight-line, circular, and figure-eight path-tracking media">
+        <svg viewBox="0 0 520 260" aria-hidden="true">
+          <path d="M38 64 H476" class="path-solid"/>
+          <circle cx="142" cy="174" r="50" class="path-solid"/>
+          <path d="M270 174 C310 112 372 112 412 174 C372 236 310 236 270 174 C310 112 372 112 412 174" class="path-solid"/>
+          <circle cx="38" cy="64" r="8" class="path-dot"/><circle cx="476" cy="64" r="8" class="path-dot"/>
+        </svg>
+        <span>Experiment media will be added</span>
+      </div>
+      <div class="nolebot-card__body">
+        <div class="nolebot-card__number">01</div>
+        <h3>Path-Tracking Controllers</h3>
+        <p>Controller development and experimental tracking for three reference geometries: a straight line, a circular path, and a figure-eight path.</p>
+        <ul>
+          <li>Reference-path generation</li>
+          <li>Heading and position-error regulation</li>
+          <li>Trajectory-specific tuning and evaluation</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="nolebot-card">
+      <div class="nolebot-card__media nolebot-card__media--model" role="img" aria-label="Placeholder for differential-drive wheeled mobile robot modeling diagrams and simulations">
+        <svg viewBox="0 0 520 260" aria-hidden="true">
+          <circle cx="258" cy="132" r="70" class="model-body"/>
+          <rect x="165" y="88" width="30" height="88" rx="12" class="model-wheel"/>
+          <rect x="321" y="88" width="30" height="88" rx="12" class="model-wheel"/>
+          <path d="M258 132 L258 36 M258 36 L246 52 M258 36 L270 52" class="model-axis"/>
+          <path d="M258 132 L408 132 M408 132 L390 120 M408 132 L390 144" class="model-axis"/>
+          <text x="270" y="56">v</text><text x="386" y="116">x</text><text x="204" y="218">ω<tspan baseline-shift="sub">L</tspan></text><text x="308" y="218">ω<tspan baseline-shift="sub">R</tspan></text>
+        </svg>
+        <span>Model and simulation media will be added</span>
+      </div>
+      <div class="nolebot-card__body">
+        <div class="nolebot-card__number">02</div>
+        <h3>DDWMR Modeling</h3>
+        <p>Modeling of the differential-drive wheeled mobile robot as the foundation for controller design, simulation, and hardware implementation.</p>
+        <ul>
+          <li>Wheel-speed to body-motion relationships</li>
+          <li>Planar pose and heading dynamics</li>
+          <li>Simulation-to-hardware parameter workflow</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="nolebot-card">
+      <div class="nolebot-card__media nolebot-card__media--slam" role="img" aria-label="Placeholder for NoleBot SLAM map and autonomous navigation media">
+        <svg viewBox="0 0 520 260" aria-hidden="true">
+          <path d="M52 54 H176 V104 H260 V44 H458 V214 H328 V164 H220 V218 H52 Z" class="map-wall"/>
+          <path d="M92 188 C144 130 192 176 238 124 S342 82 420 102" class="map-route"/>
+          <circle cx="92" cy="188" r="10" class="map-start"/><circle cx="420" cy="102" r="12" class="map-goal"/>
+          <circle cx="284" cy="118" r="19" class="map-obstacle"/><circle cx="350" cy="142" r="15" class="map-obstacle map-obstacle--moving"/>
+        </svg>
+        <span>Map and navigation media will be added</span>
+      </div>
+      <div class="nolebot-card__body">
+        <div class="nolebot-card__number">03</div>
+        <h3>SLAM and Autonomous Navigation</h3>
+        <p>Mapping the laboratory, localizing the robot, and navigating from a start pose to a goal pose with layered obstacle avoidance.</p>
+        <ul>
+          <li>SLAM-based laboratory map generation</li>
+          <li>Global planning around stationary obstacles</li>
+          <li>Local planning around moving obstacles</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="nolebot-card">
+      <div class="nolebot-card__media nolebot-card__media--teleop" role="img" aria-label="Placeholder for single-NoleBot teleoperation media">
+        <svg viewBox="0 0 520 260" aria-hidden="true">
+          <rect x="56" y="74" width="138" height="104" rx="16" class="teleop-console"/>
+          <circle cx="96" cy="126" r="22" class="teleop-control"/><path d="M96 104 V148 M74 126 H118" class="teleop-stick"/>
+          <circle cx="158" cy="112" r="8" class="teleop-button"/><circle cx="172" cy="140" r="8" class="teleop-button"/>
+          <path d="M210 98 C264 52 324 52 372 96 M210 154 C264 200 324 200 372 156" class="teleop-signal"/>
+          <circle cx="420" cy="126" r="52" class="teleop-robot"/><rect x="390" y="92" width="60" height="24" rx="8" class="teleop-sensor"/>
+        </svg>
+        <span>Teleoperation media will be added</span>
+      </div>
+      <div class="nolebot-card__body">
+        <div class="nolebot-card__number">04</div>
+        <h3>Single-NoleBot Teleoperation</h3>
+        <p>Remote human operation of one NoleBot through a command-and-feedback interface for platform testing and controlled driving experiments.</p>
+        <ul>
+          <li>Operator command interface</li>
+          <li>Velocity-command delivery</li>
+          <li>Robot feedback and safe platform operation</li>
+        </ul>
+      </div>
+    </article>
+  </div>
+</section>
+
+<style>
+  .nolebot-work { margin: 3.5rem 0; }
+  .nolebot-work__header { max-width: 48rem; margin-bottom: 1.5rem; }
+  .nolebot-work__header h2 { margin: .15rem 0 .55rem; font-size: clamp(1.8rem, 4vw, 2.6rem); }
+  .nolebot-work__header > p:last-child { margin: 0; opacity: .78; }
+  .nolebot-work__eyebrow { margin: 0; color: #38bdf8; font-size: .76rem; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; }
+  .nolebot-work__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.2rem; }
+  .nolebot-card { overflow: hidden; border: 1px solid color-mix(in srgb, currentColor 14%, transparent); border-radius: 1.2rem; background: color-mix(in srgb, currentColor 3%, transparent); }
+  .nolebot-card__media { position: relative; display: grid; min-height: 14rem; place-items: center; overflow: hidden; color: #cfeefa; background: radial-gradient(circle at 50% 35%, #14334a, #07131e 70%); }
+  .nolebot-card__media svg { width: 88%; height: auto; max-height: 12rem; }
+  .nolebot-card__media > span { position: absolute; right: .8rem; bottom: .7rem; padding: .32rem .55rem; border: 1px solid rgba(125,211,252,.34); border-radius: 999px; color: #bae6fd; background: rgba(2,10,18,.78); font-size: .68rem; letter-spacing: .04em; }
+  .nolebot-card__body { padding: 1.2rem 1.3rem 1.35rem; }
+  .nolebot-card__number { color: #38bdf8; font-size: .78rem; font-weight: 800; letter-spacing: .14em; }
+  .nolebot-card h3 { margin: .35rem 0 .65rem; font-size: 1.35rem; }
+  .nolebot-card p { margin: 0 0 .85rem; opacity: .82; }
+  .nolebot-card ul { margin: 0; padding-left: 1.1rem; font-size: .92rem; opacity: .78; }
+  .nolebot-card li + li { margin-top: .25rem; }
+  .nolebot-card svg path, .nolebot-card svg circle, .nolebot-card svg rect { vector-effect: non-scaling-stroke; }
+  .path-solid, .model-axis, .map-route, .teleop-signal { fill: none; stroke: #38bdf8; stroke-width: 7; stroke-linecap: round; stroke-linejoin: round; }
+  .path-dot, .map-goal, .teleop-button { fill: #7dd3fc; }
+  .model-body, .teleop-robot { fill: rgba(56,189,248,.14); stroke: #7dd3fc; stroke-width: 5; }
+  .model-wheel, .teleop-console { fill: #0f2232; stroke: #8edcfb; stroke-width: 4; }
+  .model-axis { stroke-width: 4; }
+  .nolebot-card__media--model text { fill: #bae6fd; font: 22px sans-serif; }
+  .map-wall { fill: none; stroke: #7dd3fc; stroke-width: 8; stroke-linejoin: round; }
+  .map-route { stroke: #fbbf24; stroke-dasharray: 12 10; stroke-width: 5; }
+  .map-start { fill: #34d399; }.map-obstacle { fill: #fb7185; }.map-obstacle--moving { stroke: #fecdd3; stroke-width: 4; stroke-dasharray: 6 5; }
+  .teleop-control { fill: #172b3b; stroke: #7dd3fc; stroke-width: 4; }.teleop-stick { fill: none; stroke: #7dd3fc; stroke-width: 4; }.teleop-signal { stroke-width: 5; stroke-dasharray: 9 10; }.teleop-sensor { fill: #38bdf8; }
+  @media (max-width: 760px) {
+    .nolebot-work__grid { grid-template-columns: 1fr; }
+    .nolebot-card__media { min-height: 12rem; }
+  }
+</style>
