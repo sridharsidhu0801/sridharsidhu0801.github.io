@@ -1,0 +1,69 @@
+<section class="f1-projects" aria-labelledby="f1-projects-title">
+  <header class="f1-projects__header">
+    <p class="f1-projects__eyebrow">Autonomous-vehicle engineering</p>
+    <h2 id="f1-projects-title">Projects Built on the F1TENTH Platform</h2>
+    <p>Six connected projects that progress from physical integration and vehicle modeling to perception, lane following, and closed-loop steering control.</p>
+  </header>
+
+  <div class="f1-projects__grid">
+    <article class="f1-card">
+      <div class="f1-card__media f1-card__media--photo">
+        {{- $resource := .Page.Resources.GetMatch "hardware-build/img_8529.jpg" -}}
+        {{- if $resource }}<img src="{{ $resource.RelPermalink }}" alt="F1TENTH chassis, drivetrain, power system, and onboard electronics during integration" loading="lazy">{{- end }}
+        <span>9-photo build gallery below</span>
+      </div>
+      <div class="f1-card__body"><div class="f1-card__number">01</div><h3>Hardware Platform Build</h3><p>Assembly and integration of the mechanical, electrical, computing, and sensing subsystems into a working autonomous-vehicle research platform.</p><ul><li>Chassis, drivetrain, steering, and suspension</li><li>Power distribution, motor controller, and wiring</li><li>NVIDIA Jetson, LiDAR, camera, and custom mounts</li></ul></div>
+    </article>
+
+    <article class="f1-card">
+      <div class="f1-card__media" role="img" aria-label="Vehicle model and parameter-estimation media placeholder"><svg viewBox="0 0 520 260" aria-hidden="true"><path d="M82 168 H430 L398 112 H154 L112 140 Z" class="f1-line"/><circle cx="164" cy="180" r="34" class="f1-wheel"/><circle cx="368" cy="180" r="34" class="f1-wheel"/><path d="M82 70 C160 38 238 98 318 66 S430 62 464 42" class="f1-accent"/><circle cx="82" cy="70" r="7" class="f1-dot"/><circle cx="464" cy="42" r="7" class="f1-dot"/></svg><span>Model and results media will be added</span></div>
+      <div class="f1-card__body"><div class="f1-card__number">02</div><h3>Vehicle Modeling &amp; Parameter Estimation</h3><p>Development of a control-oriented vehicle model and an experimental workflow for identifying parameters needed in simulation and controller design.</p><ul><li>Longitudinal and lateral vehicle behavior</li><li>Model-parameter identification</li><li>Simulation-to-hardware validation workflow</li></ul></div>
+    </article>
+
+    <article class="f1-card">
+      <div class="f1-card__media" role="img" aria-label="ROS, NVIDIA Jetson, LiDAR, and camera integration media placeholder"><svg viewBox="0 0 520 260" aria-hidden="true"><rect x="188" y="70" width="144" height="118" rx="18" class="f1-chip"/><path d="M218 105 H302 M218 132 H302 M218 159 H276" class="f1-line"/><path d="M188 92 H130 M188 132 H104 M188 168 H140 M332 92 H390 M332 132 H416 M332 168 H380" class="f1-accent"/><circle cx="104" cy="132" r="13" class="f1-dot"/><circle cx="416" cy="132" r="13" class="f1-dot"/></svg><span>System-integration media will be added</span></div>
+      <div class="f1-card__body"><div class="f1-card__number">03</div><h3>ROS &amp; Sensor Integration</h3><p>Integration of onboard computing, middleware, and vehicle sensors to create a reusable software and hardware foundation for autonomy experiments.</p><ul><li>ROS-based component communication</li><li>NVIDIA Jetson onboard computing</li><li>LiDAR and depth-camera interfaces</li></ul></div>
+    </article>
+
+    <article class="f1-card">
+      <div class="f1-card__media" role="img" aria-label="YOLO speed-limit and stop-sign detection media placeholder"><svg viewBox="0 0 520 260" aria-hidden="true"><rect x="62" y="44" width="396" height="172" rx="12" class="f1-frame"/><rect x="116" y="76" width="106" height="104" class="f1-box"/><path d="M344 76 L382 92 L398 132 L382 172 L344 188 L306 172 L290 132 L306 92 Z" class="f1-stop"/><text x="135" y="139">25</text><text x="311" y="141">STOP</text></svg><span>Detection images and video will be added</span></div>
+      <div class="f1-card__body"><div class="f1-card__number">04</div><h3>Traffic-Sign Perception</h3><p>YOLO-based visual perception for detecting speed-limit and stop signs as inputs to higher-level autonomous driving behavior.</p><ul><li>Speed-sign detection</li><li>Stop-sign detection</li><li>Camera-to-control perception pipeline</li></ul></div>
+    </article>
+
+    <article class="f1-card">
+      <div class="f1-card__media" role="img" aria-label="Lane-following experiment media placeholder"><svg viewBox="0 0 520 260" aria-hidden="true"><path d="M98 230 C170 174 172 88 220 28 M422 230 C350 174 348 88 300 28" class="f1-lane"/><path d="M260 228 C258 176 258 116 260 52" class="f1-center"/><path d="M220 192 H300 L282 144 H238 Z" class="f1-car"/></svg><span>Lane-following media will be added</span></div>
+      <div class="f1-card__body"><div class="f1-card__number">05</div><h3>Lane-Following Control</h3><p>Vision-guided lane tracking that connects perception outputs to steering commands for bounded autonomous driving experiments.</p><ul><li>Lane-feature extraction</li><li>Cross-track and heading-error feedback</li><li>Closed-loop experimental evaluation</li></ul></div>
+    </article>
+
+    <article class="f1-card">
+      <div class="f1-card__media" role="img" aria-label="PID, LQR, and Stanley steering-controller comparison media placeholder"><svg viewBox="0 0 520 260" aria-hidden="true"><path d="M58 188 C128 58 212 230 284 96 S410 76 466 40" class="f1-reference"/><path d="M58 204 C132 80 210 214 286 114 S412 92 466 52" class="f1-pid"/><path d="M58 214 C126 92 214 200 286 124 S408 104 466 64" class="f1-lqr"/><circle cx="112" cy="127" r="7" class="f1-dot"/><circle cx="284" cy="96" r="7" class="f1-dot"/></svg><span>Controller comparison media will be added</span></div>
+      <div class="f1-card__body"><div class="f1-card__number">06</div><h3>Steering Controller Development</h3><p>Design and comparison of steering controllers for path tracking across simulation and physical-platform experiments.</p><ul><li>PID steering control</li><li>LQR state-feedback control</li><li>Stanley geometric path tracking</li></ul></div>
+    </article>
+  </div>
+</section>
+
+<style>
+  .f1-projects { margin: 3.5rem 0; }
+  .f1-projects__header { max-width: 50rem; margin-bottom: 1.5rem; }
+  .f1-projects__header h2 { margin: .15rem 0 .55rem; font-size: clamp(1.8rem, 4vw, 2.6rem); }
+  .f1-projects__header > p:last-child { margin: 0; opacity: .78; }
+  .f1-projects__eyebrow { margin: 0; color: #38bdf8; font-size: .76rem; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; }
+  .f1-projects__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.2rem; }
+  .f1-card { overflow: hidden; border: 1px solid color-mix(in srgb, currentColor 14%, transparent); border-radius: 1.2rem; background: color-mix(in srgb, currentColor 3%, transparent); }
+  .f1-card__media { position: relative; display: grid; min-height: 14rem; place-items: center; overflow: hidden; color: #cfeefa; background: radial-gradient(circle at 50% 35%, #14334a, #07131e 70%); }
+  .f1-card__media svg { width: 88%; height: auto; max-height: 12rem; }
+  .f1-card__media--photo img { width: 100%; height: 14rem; object-fit: cover; object-position: center; }
+  .f1-card__media > span { position: absolute; right: .8rem; bottom: .7rem; padding: .32rem .55rem; border: 1px solid rgba(125,211,252,.34); border-radius: 999px; color: #bae6fd; background: rgba(2,10,18,.8); font-size: .68rem; letter-spacing: .04em; }
+  .f1-card__body { padding: 1.2rem 1.3rem 1.35rem; }
+  .f1-card__number { color: #38bdf8; font-size: .78rem; font-weight: 800; letter-spacing: .14em; }
+  .f1-card h3 { margin: .35rem 0 .65rem; font-size: 1.35rem; }
+  .f1-card p { margin: 0 0 .85rem; opacity: .82; }
+  .f1-card ul { margin: 0; padding-left: 1.1rem; font-size: .92rem; opacity: .78; }
+  .f1-card li + li { margin-top: .25rem; }
+  .f1-card svg path, .f1-card svg circle, .f1-card svg rect { vector-effect: non-scaling-stroke; }
+  .f1-line, .f1-accent, .f1-lane, .f1-center, .f1-reference, .f1-pid, .f1-lqr { fill: none; stroke: #38bdf8; stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; }
+  .f1-accent, .f1-center { stroke: #fbbf24; stroke-dasharray: 11 9; }.f1-dot { fill: #7dd3fc; }.f1-wheel { fill: #0f2232; stroke: #7dd3fc; stroke-width: 5; }
+  .f1-chip { fill: rgba(56,189,248,.13); stroke: #7dd3fc; stroke-width: 5; }.f1-frame { fill: none; stroke: #7dd3fc; stroke-width: 5; }.f1-box { fill: none; stroke: #fbbf24; stroke-width: 5; }.f1-stop { fill: rgba(251,113,133,.18); stroke: #fb7185; stroke-width: 6; }
+  .f1-card__media text { fill: #e0f2fe; font: 700 24px sans-serif; }.f1-lane { stroke-width: 9; }.f1-car { fill: rgba(56,189,248,.2); stroke: #7dd3fc; stroke-width: 5; }.f1-reference { stroke: #f8fafc; }.f1-pid { stroke: #38bdf8; }.f1-lqr { stroke: #fbbf24; stroke-dasharray: 10 8; }
+  @media (max-width: 760px) { .f1-projects__grid { grid-template-columns: 1fr; }.f1-card__media { min-height: 12rem; }.f1-card__media--photo img { height: 12rem; } }
+</style>
