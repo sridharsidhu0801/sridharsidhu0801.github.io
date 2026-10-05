@@ -54,14 +54,10 @@
     </article>
 
     <article class="nolebot-card">
-      <div class="nolebot-card__media nolebot-card__media--slam" role="img" aria-label="Placeholder for NoleBot SLAM map and autonomous navigation media">
-        <svg viewBox="0 0 520 260" aria-hidden="true">
-          <path d="M52 54 H176 V104 H260 V44 H458 V214 H328 V164 H220 V218 H52 Z" class="map-wall"/>
-          <path d="M92 188 C144 130 192 176 238 124 S342 82 420 102" class="map-route"/>
-          <circle cx="92" cy="188" r="10" class="map-start"/><circle cx="420" cy="102" r="12" class="map-goal"/>
-          <circle cx="284" cy="118" r="19" class="map-obstacle"/><circle cx="350" cy="142" r="15" class="map-obstacle map-obstacle--moving"/>
-        </svg>
-        <span>Map and navigation media will be added</span>
+      <div class="nolebot-card__media nolebot-card__media--image">
+        {{- $slamImage := .Page.Resources.GetMatch "slam-navigation/rviz-slam-navigation.png" -}}
+        {{- if $slamImage }}<img src="{{ $slamImage.RelPermalink }}" alt="RViz view of the NoleBot laboratory map, local costmap, laser scan, robot pose, and navigation planning interfaces" loading="lazy">{{- end }}
+        <span>RViz mapping, localization, and navigation</span>
       </div>
       <div class="nolebot-card__body">
         <div class="nolebot-card__number">03</div>
@@ -112,6 +108,8 @@
   .nolebot-card__media svg { width: 88%; height: auto; max-height: 12rem; }
   .nolebot-card__media--video { display: block; background: #020a12; }
   .nolebot-card__media--video video { display: block; width: 100%; height: 14rem; object-fit: contain; background: #020a12; }
+  .nolebot-card__media--image { display: block; background: #020a12; }
+  .nolebot-card__media--image img { display: block; width: 100%; height: 14rem; object-fit: contain; object-position: center; }
   .nolebot-card__media > span { position: absolute; right: .8rem; bottom: .7rem; padding: .32rem .55rem; border: 1px solid rgba(125,211,252,.34); border-radius: 999px; color: #bae6fd; background: rgba(2,10,18,.78); font-size: .68rem; letter-spacing: .04em; }
   .nolebot-card__body { padding: 1.2rem 1.3rem 1.35rem; }
   .nolebot-card__number { color: #38bdf8; font-size: .78rem; font-weight: 800; letter-spacing: .14em; }
@@ -134,5 +132,6 @@
     .nolebot-work__grid { grid-template-columns: 1fr; }
     .nolebot-card__media { min-height: 12rem; }
     .nolebot-card__media--video video { height: 12rem; }
+    .nolebot-card__media--image img { height: 12rem; }
   }
 </style>
