@@ -7,14 +7,15 @@
 
   <div class="nolebot-work__grid">
     <article class="nolebot-card">
-      <div class="nolebot-card__media nolebot-card__media--path" role="img" aria-label="Placeholder for NoleBot straight-line, circular, and figure-eight path-tracking media">
-        <svg viewBox="0 0 520 260" aria-hidden="true">
-          <path d="M38 64 H476" class="path-solid"/>
-          <circle cx="142" cy="174" r="50" class="path-solid"/>
-          <path d="M270 174 C310 112 372 112 412 174 C372 236 310 236 270 174 C310 112 372 112 412 174" class="path-solid"/>
-          <circle cx="38" cy="64" r="8" class="path-dot"/><circle cx="476" cy="64" r="8" class="path-dot"/>
-        </svg>
-        <span>Experiment media will be added</span>
+      <div class="nolebot-card__media nolebot-card__media--video">
+        {{- $pathVideo := .Page.Resources.GetMatch "path-tracking/attack-wmr-figure8-web.mp4" -}}
+        {{- if $pathVideo }}
+          <video controls playsinline preload="metadata" aria-label="Figure-eight wheeled-mobile-robot path-tracking experiment">
+            <source src="{{ $pathVideo.RelPermalink }}" type="video/mp4">
+            Your browser does not support embedded MP4 video.
+          </video>
+        {{- end }}
+        <span>Figure-eight path-tracking experiment · 60 s</span>
       </div>
       <div class="nolebot-card__body">
         <div class="nolebot-card__number">01</div>
@@ -109,6 +110,8 @@
   .nolebot-card { overflow: hidden; border: 1px solid color-mix(in srgb, currentColor 14%, transparent); border-radius: 1.2rem; background: color-mix(in srgb, currentColor 3%, transparent); }
   .nolebot-card__media { position: relative; display: grid; min-height: 14rem; place-items: center; overflow: hidden; color: #cfeefa; background: radial-gradient(circle at 50% 35%, #14334a, #07131e 70%); }
   .nolebot-card__media svg { width: 88%; height: auto; max-height: 12rem; }
+  .nolebot-card__media--video { display: block; background: #020a12; }
+  .nolebot-card__media--video video { display: block; width: 100%; height: 14rem; object-fit: contain; background: #020a12; }
   .nolebot-card__media > span { position: absolute; right: .8rem; bottom: .7rem; padding: .32rem .55rem; border: 1px solid rgba(125,211,252,.34); border-radius: 999px; color: #bae6fd; background: rgba(2,10,18,.78); font-size: .68rem; letter-spacing: .04em; }
   .nolebot-card__body { padding: 1.2rem 1.3rem 1.35rem; }
   .nolebot-card__number { color: #38bdf8; font-size: .78rem; font-weight: 800; letter-spacing: .14em; }
@@ -130,5 +133,6 @@
   @media (max-width: 760px) {
     .nolebot-work__grid { grid-template-columns: 1fr; }
     .nolebot-card__media { min-height: 12rem; }
+    .nolebot-card__media--video video { height: 12rem; }
   }
 </style>
