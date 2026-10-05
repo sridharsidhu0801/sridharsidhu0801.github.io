@@ -1,0 +1,114 @@
+{{- $slides := slice
+  (dict "image" "hardware-build/img_8522.jpg" "title" "Onboard compute" "caption" "Preparing the NVIDIA Jetson computing stack and carrier-board interfaces for vehicle integration.")
+  (dict "image" "hardware-build/img_8523.jpg" "title" "LiDAR electronics" "caption" "Inspecting the ranging sensor electronics, power, and signal connections before installation.")
+  (dict "image" "hardware-build/img_8524.jpg" "title" "LiDAR assembly" "caption" "Opening and checking the LiDAR assembly and enclosure components used on the perception stack.")
+  (dict "image" "hardware-build/img_8527.jpg" "title" "Depth-camera integration" "caption" "Integrating an Intel RealSense depth camera for visual perception and environment sensing.")
+  (dict "image" "hardware-build/img_8528.jpg" "title" "Custom sensor mounts" "caption" "Prototyping and fitting custom mounting hardware for a rigid, serviceable sensor arrangement.")
+  (dict "image" "hardware-build/img_8529.jpg" "title" "Chassis and power system" "caption" "Routing power and packaging the battery, drivetrain electronics, and mechanical chassis components.")
+  (dict "image" "hardware-build/img_8532.jpg" "title" "Drivetrain and suspension" "caption" "Inspecting the motor, suspension, wheel, and steering hardware before final assembly.")
+  (dict "image" "hardware-build/img_8533.jpg" "title" "Steering linkage" "caption" "Checking the front steering linkage and suspension geometry for reliable closed-loop control.")
+  (dict "image" "hardware-build/img_8534.jpg" "title" "Motor and ESC wiring" "caption" "Completing the motor, electronic speed controller, and power wiring for the drive system.")
+-}}
+
+<section class="f1-build" aria-labelledby="f1-build-title">
+  <div class="f1-build__heading">
+    <p class="f1-build__eyebrow">Platform engineering</p>
+    <h2 id="f1-build-title">Hardware Build</h2>
+    <p>From individual compute, sensing, and drivetrain components to an integrated F1TENTH autonomous-vehicle platform.</p>
+  </div>
+
+  <div class="f1-build__viewer" data-f1-build>
+    <div class="f1-build__stage" aria-live="polite">
+      {{- range $index, $slide := $slides }}
+        {{- $resource := $.Page.Resources.GetMatch $slide.image }}
+        {{- if $resource }}
+          <figure class="f1-build__slide{{ if eq $index 0 }} is-active{{ end }}" data-slide="{{ $index }}" aria-hidden="{{ if eq $index 0 }}false{{ else }}true{{ end }}">
+            <img src="{{ $resource.RelPermalink }}" alt="{{ $slide.title }} during the F1TENTH hardware build" loading="{{ if eq $index 0 }}eager{{ else }}lazy{{ end }}">
+            <figcaption>
+              <strong>{{ printf "%02d" (add $index 1) }} · {{ $slide.title }}</strong>
+              <span>{{ $slide.caption }}</span>
+            </figcaption>
+          </figure>
+        {{- end }}
+      {{- end }}
+    </div>
+
+    <div class="f1-build__controls">
+      <button type="button" data-direction="previous" aria-label="Show previous hardware-build photo">←</button>
+      <div class="f1-build__counter"><span data-current>01</span> / {{ printf "%02d" (len $slides) }}</div>
+      <button type="button" data-direction="next" aria-label="Show next hardware-build photo">→</button>
+    </div>
+
+    <div class="f1-build__rail" aria-label="Choose a hardware-build photo">
+      {{- range $index, $slide := $slides }}
+        {{- $resource := $.Page.Resources.GetMatch $slide.image }}
+        {{- if $resource }}
+          <button type="button" class="{{ if eq $index 0 }}is-active{{ end }}" data-target="{{ $index }}" aria-label="Show {{ $slide.title }}" aria-current="{{ if eq $index 0 }}true{{ else }}false{{ end }}">
+            <img src="{{ $resource.RelPermalink }}" alt="" loading="lazy">
+          </button>
+        {{- end }}
+      {{- end }}
+    </div>
+  </div>
+</section>
+
+<style>
+  .f1-build { margin: 3.5rem 0; padding: clamp(1rem, 3vw, 2rem); border: 1px solid color-mix(in srgb, currentColor 14%, transparent); border-radius: 1.35rem; background: color-mix(in srgb, currentColor 3%, transparent); }
+  .f1-build__heading { max-width: 52rem; margin-bottom: 1.5rem; }
+  .f1-build__heading h2 { margin: .15rem 0 .55rem; font-size: clamp(1.8rem, 4vw, 2.65rem); }
+  .f1-build__heading p:last-child { margin: 0; opacity: .78; }
+  .f1-build__eyebrow { margin: 0; color: #38bdf8; font-size: .76rem; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; }
+  .f1-build__stage { position: relative; min-height: min(72vw, 43rem); overflow: hidden; border-radius: 1rem; background: #050b12; }
+  .f1-build__slide { position: absolute; inset: 0; display: grid; grid-template-rows: minmax(0, 1fr) auto; margin: 0; opacity: 0; visibility: hidden; transition: opacity .35s ease; }
+  .f1-build__slide.is-active { opacity: 1; visibility: visible; }
+  .f1-build__slide img { width: 100%; height: 100%; min-height: 0; object-fit: contain; background: #050b12; }
+  .f1-build__slide figcaption { display: grid; gap: .25rem; padding: 1rem 1.15rem; color: #e8f4fb; background: #0b1722; }
+  .f1-build__slide figcaption strong { color: #7dd3fc; }
+  .f1-build__slide figcaption span { opacity: .88; }
+  .f1-build__controls { display: flex; align-items: center; justify-content: center; gap: 1rem; padding: 1rem 0 .75rem; }
+  .f1-build__controls button { display: grid; width: 2.65rem; height: 2.65rem; place-items: center; border: 1px solid color-mix(in srgb, currentColor 22%, transparent); border-radius: 999px; background: transparent; cursor: pointer; }
+  .f1-build__controls button:hover, .f1-build__controls button:focus-visible { border-color: #38bdf8; color: #38bdf8; }
+  .f1-build__counter { min-width: 4.75rem; text-align: center; font-variant-numeric: tabular-nums; }
+  .f1-build__rail { display: grid; grid-template-columns: repeat(9, minmax(4.5rem, 1fr)); gap: .55rem; overflow-x: auto; padding: .2rem .1rem .55rem; }
+  .f1-build__rail button { min-width: 4.5rem; padding: 0; overflow: hidden; aspect-ratio: 4 / 3; border: 2px solid transparent; border-radius: .55rem; background: #07111b; cursor: pointer; opacity: .56; }
+  .f1-build__rail button.is-active { border-color: #38bdf8; opacity: 1; }
+  .f1-build__rail img { width: 100%; height: 100%; object-fit: cover; }
+  @media (max-width: 700px) {
+    .f1-build { margin-inline: -.35rem; padding: .75rem; }
+    .f1-build__stage { min-height: 34rem; }
+    .f1-build__slide figcaption { font-size: .9rem; }
+    .f1-build__rail { grid-template-columns: repeat(9, 5.1rem); }
+  }
+</style>
+
+<script>
+  (() => {
+    const section = document.currentScript.previousElementSibling.previousElementSibling;
+    const root = section?.querySelector('[data-f1-build]');
+    if (!root) return;
+    const slides = [...root.querySelectorAll('[data-slide]')];
+    const targets = [...root.querySelectorAll('[data-target]')];
+    const counter = root.querySelector('[data-current]');
+    let active = 0;
+
+    const show = (next) => {
+      active = (next + slides.length) % slides.length;
+      slides.forEach((slide, index) => {
+        const selected = index === active;
+        slide.classList.toggle('is-active', selected);
+        slide.setAttribute('aria-hidden', String(!selected));
+      });
+      targets.forEach((target, index) => {
+        const selected = index === active;
+        target.classList.toggle('is-active', selected);
+        target.setAttribute('aria-current', String(selected));
+      });
+      counter.textContent = String(active + 1).padStart(2, '0');
+    };
+
+    root.querySelectorAll('[data-direction]').forEach((button) => {
+      button.addEventListener('click', () => show(active + (button.dataset.direction === 'next' ? 1 : -1)));
+    });
+    targets.forEach((button) => button.addEventListener('click', () => show(Number(button.dataset.target))));
+  })();
+</script>
