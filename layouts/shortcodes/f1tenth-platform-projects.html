@@ -1,4 +1,15 @@
-<section class="f1-projects" aria-labelledby="f1-projects-title">
+{{- $buildSlides := slice
+  (dict "image" "hardware-build/img_8522.jpg" "title" "Onboard compute")
+  (dict "image" "hardware-build/img_8523.jpg" "title" "LiDAR electronics")
+  (dict "image" "hardware-build/img_8524.jpg" "title" "LiDAR assembly")
+  (dict "image" "hardware-build/img_8527.jpg" "title" "Depth-camera integration")
+  (dict "image" "hardware-build/img_8528.jpg" "title" "Custom sensor mounts")
+  (dict "image" "hardware-build/img_8529.jpg" "title" "Chassis and power system")
+  (dict "image" "hardware-build/img_8532.jpg" "title" "Drivetrain and suspension")
+  (dict "image" "hardware-build/img_8533.jpg" "title" "Steering linkage")
+  (dict "image" "hardware-build/img_8534.jpg" "title" "Motor and ESC wiring")
+-}}
+<section class="f1-projects" aria-labelledby="f1-projects-title" data-f1-projects>
   <header class="f1-projects__header">
     <p class="f1-projects__eyebrow">Autonomous-vehicle engineering</p>
     <h2 id="f1-projects-title">Projects Built on the F1TENTH Platform</h2>
@@ -7,10 +18,26 @@
 
   <div class="f1-projects__grid">
     <article class="f1-card">
-      <div class="f1-card__media f1-card__media--photo">
-        {{- $resource := .Page.Resources.GetMatch "hardware-build/img_8529.jpg" -}}
-        {{- if $resource }}<img src="{{ $resource.RelPermalink }}" alt="F1TENTH chassis, drivetrain, power system, and onboard electronics during integration" loading="lazy">{{- end }}
-        <span>9-photo build gallery below</span>
+      <div class="f1-build-card" data-f1-card-slideshow aria-label="F1TENTH hardware-build slideshow">
+        <div class="f1-build-card__stage" aria-live="polite">
+          {{- range $index, $slide := $buildSlides }}
+            {{- $resource := $.Page.Resources.GetMatch $slide.image }}
+            {{- if $resource }}
+              <figure class="f1-build-card__slide{{ if eq $index 0 }} is-active{{ end }}" data-build-slide="{{ $index }}" aria-hidden="{{ if eq $index 0 }}false{{ else }}true{{ end }}">
+                <img src="{{ $resource.RelPermalink }}" alt="{{ $slide.title }} during the F1TENTH platform build" loading="{{ if eq $index 0 }}eager{{ else }}lazy{{ end }}">
+                <figcaption>{{ $slide.title }}</figcaption>
+              </figure>
+            {{- end }}
+          {{- end }}
+        </div>
+        <button class="f1-build-card__arrow f1-build-card__arrow--previous" type="button" data-build-direction="previous" aria-label="Show previous hardware-build image">←</button>
+        <button class="f1-build-card__arrow f1-build-card__arrow--next" type="button" data-build-direction="next" aria-label="Show next hardware-build image">→</button>
+        <div class="f1-build-card__footer">
+          <span><strong data-build-current>01</strong> / {{ printf "%02d" (len $buildSlides) }}</span>
+          <div class="f1-build-card__dots" aria-label="Choose a hardware-build image">
+            {{- range $index, $slide := $buildSlides }}<button type="button" class="{{ if eq $index 0 }}is-active{{ end }}" data-build-target="{{ $index }}" aria-label="Show {{ $slide.title }}" aria-current="{{ if eq $index 0 }}true{{ else }}false{{ end }}"></button>{{- end }}
+          </div>
+        </div>
       </div>
       <div class="f1-card__body"><div class="f1-card__number">01</div><h3>Hardware Platform Build</h3><p>Assembly and integration of the mechanical, electrical, computing, and sensing subsystems into a working autonomous-vehicle research platform.</p><ul><li>Chassis, drivetrain, steering, and suspension</li><li>Power distribution, motor controller, and wiring</li><li>NVIDIA Jetson, LiDAR, camera, and custom mounts</li></ul></div>
     </article>
@@ -52,7 +79,19 @@
   .f1-card { overflow: hidden; border: 1px solid color-mix(in srgb, currentColor 14%, transparent); border-radius: 1.2rem; background: color-mix(in srgb, currentColor 3%, transparent); }
   .f1-card__media { position: relative; display: grid; min-height: 14rem; place-items: center; overflow: hidden; color: #cfeefa; background: radial-gradient(circle at 50% 35%, #14334a, #07131e 70%); }
   .f1-card__media svg { width: 88%; height: auto; max-height: 12rem; }
-  .f1-card__media--photo img { width: 100%; height: 14rem; object-fit: cover; object-position: center; }
+  .f1-build-card { position: relative; overflow: hidden; color: #e0f2fe; background: #07131e; }
+  .f1-build-card__stage { position: relative; height: 14rem; }
+  .f1-build-card__slide { position: absolute; inset: 0; margin: 0; opacity: 0; visibility: hidden; transition: opacity .7s ease; }
+  .f1-build-card__slide.is-active { opacity: 1; visibility: visible; }
+  .f1-build-card__slide img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+  .f1-build-card__slide figcaption { position: absolute; right: .75rem; bottom: .7rem; left: .75rem; padding: .42rem .6rem; border-radius: .55rem; color: #f0f9ff; background: rgba(2,10,18,.76); font-size: .78rem; font-weight: 700; backdrop-filter: blur(5px); }
+  .f1-build-card__arrow { position: absolute; z-index: 3; top: 6.1rem; display: grid; width: 2rem; height: 2rem; place-items: center; border: 1px solid rgba(255,255,255,.35); border-radius: 999px; color: #fff; background: rgba(2,10,18,.62); cursor: pointer; }
+  .f1-build-card__arrow:hover, .f1-build-card__arrow:focus-visible { background: rgba(14,165,233,.85); }
+  .f1-build-card__arrow--previous { left: .6rem; }.f1-build-card__arrow--next { right: .6rem; }
+  .f1-build-card__footer { display: flex; min-height: 2.45rem; align-items: center; justify-content: space-between; gap: .8rem; padding: .45rem .75rem; background: #0a1d2a; font-size: .72rem; }
+  .f1-build-card__dots { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: .3rem; }
+  .f1-build-card__dots button { width: .48rem; height: .48rem; padding: 0; border: 0; border-radius: 999px; background: rgba(186,230,253,.34); cursor: pointer; }
+  .f1-build-card__dots button.is-active { width: 1.1rem; background: #38bdf8; }
   .f1-card__media > span { position: absolute; right: .8rem; bottom: .7rem; padding: .32rem .55rem; border: 1px solid rgba(125,211,252,.34); border-radius: 999px; color: #bae6fd; background: rgba(2,10,18,.8); font-size: .68rem; letter-spacing: .04em; }
   .f1-card__body { padding: 1.2rem 1.3rem 1.35rem; }
   .f1-card__number { color: #38bdf8; font-size: .78rem; font-weight: 800; letter-spacing: .14em; }
@@ -65,5 +104,51 @@
   .f1-accent, .f1-center { stroke: #fbbf24; stroke-dasharray: 11 9; }.f1-dot { fill: #7dd3fc; }.f1-wheel { fill: #0f2232; stroke: #7dd3fc; stroke-width: 5; }
   .f1-chip { fill: rgba(56,189,248,.13); stroke: #7dd3fc; stroke-width: 5; }.f1-frame { fill: none; stroke: #7dd3fc; stroke-width: 5; }.f1-box { fill: none; stroke: #fbbf24; stroke-width: 5; }.f1-stop { fill: rgba(251,113,133,.18); stroke: #fb7185; stroke-width: 6; }
   .f1-card__media text { fill: #e0f2fe; font: 700 24px sans-serif; }.f1-lane { stroke-width: 9; }.f1-car { fill: rgba(56,189,248,.2); stroke: #7dd3fc; stroke-width: 5; }.f1-reference { stroke: #f8fafc; }.f1-pid { stroke: #38bdf8; }.f1-lqr { stroke: #fbbf24; stroke-dasharray: 10 8; }
-  @media (max-width: 760px) { .f1-projects__grid { grid-template-columns: 1fr; }.f1-card__media { min-height: 12rem; }.f1-card__media--photo img { height: 12rem; } }
+  @media (max-width: 760px) { .f1-projects__grid { grid-template-columns: 1fr; }.f1-card__media { min-height: 12rem; }.f1-build-card__stage { height: 12rem; }.f1-build-card__arrow { top: 5.1rem; } }
+  @media (prefers-reduced-motion: reduce) { .f1-build-card__slide { transition: none; } }
 </style>
+
+<script>
+  (() => {
+    const root = document.currentScript.previousElementSibling.previousElementSibling;
+    const viewer = root?.querySelector('[data-f1-card-slideshow]');
+    if (!viewer) return;
+    const slides = [...viewer.querySelectorAll('[data-build-slide]')];
+    const dots = [...viewer.querySelectorAll('[data-build-target]')];
+    const counter = viewer.querySelector('[data-build-current]');
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let active = 0;
+    let timer;
+
+    const show = (next) => {
+      active = (next + slides.length) % slides.length;
+      slides.forEach((slide, index) => {
+        const selected = index === active;
+        slide.classList.toggle('is-active', selected);
+        slide.setAttribute('aria-hidden', String(!selected));
+      });
+      dots.forEach((dot, index) => {
+        const selected = index === active;
+        dot.classList.toggle('is-active', selected);
+        dot.setAttribute('aria-current', String(selected));
+      });
+      if (counter) counter.textContent = String(active + 1).padStart(2, '0');
+    };
+    const stop = () => { if (timer) window.clearInterval(timer); };
+    const start = () => {
+      stop();
+      if (!reduceMotion) timer = window.setInterval(() => show(active + 1), 4200);
+    };
+
+    viewer.querySelectorAll('[data-build-direction]').forEach((button) => button.addEventListener('click', () => {
+      show(active + (button.dataset.buildDirection === 'next' ? 1 : -1));
+      start();
+    }));
+    dots.forEach((dot) => dot.addEventListener('click', () => { show(Number(dot.dataset.buildTarget)); start(); }));
+    viewer.addEventListener('mouseenter', stop);
+    viewer.addEventListener('mouseleave', start);
+    viewer.addEventListener('focusin', stop);
+    viewer.addEventListener('focusout', start);
+    start();
+  })();
+</script>

@@ -21,9 +21,3 @@ The platform supports a complete autonomy workflow: establish a trustworthy vehi
 I built the vehicle platform from individual mechanical, electrical, computing, and sensing components. The build required chassis and drivetrain assembly, power and motor-controller wiring, steering and suspension checks, NVIDIA Jetson integration, LiDAR and depth-camera preparation, and custom sensor-mount development.
 
 {{< f1tenth-platform-projects >}}
-
-## Hardware build gallery
-
-The gallery below documents the physical platform integration. Additional results, photographs, and short experiment videos will be added to the corresponding project cards as each capability is reviewed.
-
-{{< f1tenth-hardware-build >}}
