@@ -105,13 +105,13 @@
 </section>
 
 <style>
-  .manipulator-work { margin: 3.5rem 0; }
+  .manipulator-work { width: min(1180px, calc(100vw - 2rem)); margin: 3.5rem 0 3.5rem 50%; transform: translateX(-50%); }
   .manipulator-work__header { max-width: 52rem; margin-bottom: 1.5rem; }
   .manipulator-work__header--coursework { margin-top: 3.4rem; }
   .manipulator-work__header h2 { margin: .15rem 0 .55rem; font-size: clamp(1.8rem, 4vw, 2.6rem); }
   .manipulator-work__header > p:last-child { margin: 0; opacity: .78; }
   .manipulator-work__eyebrow { margin: 0; color: #38bdf8; font-size: .76rem; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; }
-  .manipulator-work__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.2rem; }
+  .manipulator-work__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.2rem; }
   .manipulator-card { overflow: hidden; border: 1px solid color-mix(in srgb, currentColor 14%, transparent); border-radius: 1.2rem; background: color-mix(in srgb, currentColor 3%, transparent); }
   .manipulator-card__media { position: relative; display: grid; min-height: 14rem; place-items: center; overflow: hidden; color: #cfeefa; background: radial-gradient(circle at 50% 35%, #14334a, #07131e 70%); }
   .manipulator-card__media svg { width: 91%; height: auto; max-height: 12rem; }
@@ -135,6 +135,7 @@
   .man-link { stroke-width: 15; }.man-arrow { stroke: #fbbf24; stroke-dasharray: 8 7; }.man-joint { fill: #0f2232; stroke: #38bdf8; stroke-width: 6; }.man-tip { fill: #fbbf24; }
   .man-block { fill: rgba(56,189,248,.13); stroke: #7dd3fc; stroke-width: 5; }.man-block--observer { stroke: #fbbf24; }.man-flow { stroke-width: 4; }.man-axis { stroke-width: 4; }.man-reference { stroke: #f8fafc; stroke-dasharray: 9 8; }.man-response { stroke: #38bdf8; }.man-response--second { stroke: #fbbf24; }
   .manipulator-card__media text { fill: #e0f2fe; font: 700 20px sans-serif; }
-  @media (max-width: 760px) { .manipulator-work__grid { grid-template-columns: 1fr; }.manipulator-card__media { min-height: 12rem; }.manipulator-card__media--image img { height: 12rem; }.manipulator-card__media--reel figure { height: 12rem; } }
+  @media (max-width: 980px) { .manipulator-work__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 680px) { .manipulator-work { width: 100%; margin-left: 0; transform: none; }.manipulator-work__grid { grid-template-columns: 1fr; }.manipulator-card__media { min-height: 12rem; }.manipulator-card__media--image img { height: 12rem; }.manipulator-card__media--reel figure { height: 12rem; } }
   @media (prefers-reduced-motion: reduce) { .manipulator-card__media--reel video { display: none; } }
 </style>
