@@ -1,0 +1,140 @@
+<section class="manipulator-work" aria-labelledby="manipulator-work-title">
+  <header class="manipulator-work__header">
+    <p class="manipulator-work__eyebrow">Platform integration</p>
+    <h2 id="manipulator-work-title">SCHUNK LWA4D Platform</h2>
+    <p>Three evidence-backed projects covering the physical platform, simulated motion planning, and the communication layer required to connect ROS controllers to the robot hardware.</p>
+  </header>
+
+  <div class="manipulator-work__grid">
+    <article class="manipulator-card">
+      <div class="manipulator-card__media manipulator-card__media--image">
+        {{- $platform := .Page.Resources.GetMatch "platform/schunk-lwa4d.jpg" -}}
+        {{- if $platform }}<img src="{{ $platform.RelPermalink }}" alt="SCHUNK LWA4D seven-degree-of-freedom manipulator" loading="lazy">{{- end }}
+        <span>Seven-degree-of-freedom robot platform</span>
+      </div>
+      <div class="manipulator-card__body">
+        <div class="manipulator-card__number">01 · PLATFORM</div>
+        <h3>SCHUNK LWA4D Integration</h3>
+        <p>Robot-description and integration work for a modular manipulator built around SCHUNK PowerCube joints and a ROS-based development environment.</p>
+        <ul><li>URDF and seven-joint robot configuration</li><li>ROS-Industrial and controller architecture</li><li>Physical platform, vendor, and CAN-USB setup</li></ul>
+      </div>
+    </article>
+
+    <article class="manipulator-card">
+      <div class="manipulator-card__media manipulator-card__media--reel" aria-label="Three simulated SCHUNK LWA4D motion sequences">
+        {{- $wave := .Page.Resources.GetMatch "planning/wave-left.mp4" -}}
+        {{- $fold := .Page.Resources.GetMatch "planning/fold.mp4" -}}
+        {{- $home := .Page.Resources.GetMatch "planning/home.mp4" -}}
+        <figure>{{- if $wave }}<video muted loop autoplay playsinline preload="metadata" aria-label="Simulated wave-left manipulator motion"><source src="{{ $wave.RelPermalink }}" type="video/mp4"></video>{{- end }}<figcaption>Wave left</figcaption></figure>
+        <figure>{{- if $fold }}<video muted loop autoplay playsinline preload="metadata" aria-label="Simulated manipulator folding motion"><source src="{{ $fold.RelPermalink }}" type="video/mp4"></video>{{- end }}<figcaption>Fold</figcaption></figure>
+        <figure>{{- if $home }}<video muted loop autoplay playsinline preload="metadata" aria-label="Simulated manipulator home motion"><source src="{{ $home.RelPermalink }}" type="video/mp4"></video>{{- end }}<figcaption>Home</figcaption></figure>
+        <span>MoveIt-planned motion sequences</span>
+      </div>
+      <div class="manipulator-card__body">
+        <div class="manipulator-card__number">02 · SIMULATION</div>
+        <h3>Gazebo and MoveIt Motion Planning</h3>
+        <p>Pose and trajectory development in RViz and Gazebo using MoveIt services, interactive markers, kinematic solvers, and joint controllers.</p>
+        <ul><li>Forward- and inverse-kinematics workflows</li><li>End-effector pose and joint-space planning</li><li>Wave, fold, and home motion sequences</li></ul>
+      </div>
+    </article>
+
+    <article class="manipulator-card">
+      <div class="manipulator-card__media manipulator-card__media--image">
+        {{- $can := .Page.Resources.GetMatch "hardware/canopen-architecture.png" -}}
+        {{- if $can }}<img src="{{ $can.RelPermalink }}" alt="ROS CANopen software architecture for connecting controllers to manipulator hardware" loading="lazy">{{- end }}
+        <span>Interface investigation · connection unresolved</span>
+      </div>
+      <div class="manipulator-card__body">
+        <div class="manipulator-card__number">03 · HARDWARE INTERFACE</div>
+        <h3>ROS-Control and CAN Communication</h3>
+        <p>Investigation of the software and hardware path from ROS controllers through SocketCAN and CANopen to the manipulator’s PowerCube modules.</p>
+        <ul><li>Position, velocity, and joint-state interfaces</li><li>CAN-USB driver and PowerCube evaluation</li><li>Communication diagnosis and integration limits</li></ul>
+      </div>
+    </article>
+  </div>
+
+  <header class="manipulator-work__header manipulator-work__header--coursework">
+    <p class="manipulator-work__eyebrow">Advanced-control coursework</p>
+    <h2>Manipulator Control Studies</h2>
+    <p>Three related studies using a nonlinear two-link robot. These cards show the control foundation behind the platform work without implying that the controllers were deployed on the physical SCHUNK arm.</p>
+  </header>
+
+  <div class="manipulator-work__grid">
+    <article class="manipulator-card">
+      <div class="manipulator-card__media manipulator-card__media--image manipulator-card__media--plot">
+        {{- $modelPlot := .Page.Resources.GetMatch "controls/two-link-simulink.png" -}}
+        {{- if $modelPlot }}<img src="{{ $modelPlot.RelPermalink }}" alt="Simulink implementation of the nonlinear two-link robot and full-state feedback controller" loading="lazy">{{- end }}
+        <span>Nonlinear Simulink plant and controller</span>
+      </div>
+      <div class="manipulator-card__body">
+        <div class="manipulator-card__number">04 · COURSEWORK</div>
+        <h3>Two-Link Manipulator Modeling</h3>
+        <p>Nonlinear dynamics and a control-oriented state-space representation developed as the plant for regulation and tracking studies.</p>
+        <ul><li>Coupled joint dynamics</li><li>Equilibrium-point linearization</li><li>MIMO simulation and response analysis</li></ul>
+      </div>
+    </article>
+
+    <article class="manipulator-card">
+      <div class="manipulator-card__media manipulator-card__media--image manipulator-card__media--plot">
+        {{- $observerPlot := .Page.Resources.GetMatch "controls/observer-response.png" -}}
+        {{- if $observerPlot }}<img src="{{ $observerPlot.RelPermalink }}" alt="Two-link robot joint positions and velocities under observer-based full-state feedback" loading="lazy">{{- end }}
+        <span>Observer-based state response</span>
+      </div>
+      <div class="manipulator-card__body">
+        <div class="manipulator-card__number">05 · COURSEWORK</div>
+        <h3>State Feedback and Observer Control</h3>
+        <p>Pole-placement regulation and observer-based feedback tested against the nonlinear two-link plant.</p>
+        <ul><li>Closed-loop pole selection</li><li>State estimation and reconstructed feedback</li><li>Step and sinusoidal reference studies</li></ul>
+      </div>
+    </article>
+
+    <article class="manipulator-card">
+      <div class="manipulator-card__media manipulator-card__media--image manipulator-card__media--plot">
+        {{- $integralPlot := .Page.Resources.GetMatch "controls/integral-sinusoidal-tracking.png" -}}
+        {{- if $integralPlot }}<img src="{{ $integralPlot.RelPermalink }}" alt="Two-link robot sinusoidal joint tracking and velocity response using integral action" loading="lazy">{{- end }}
+        <span>Sinusoidal tracking with integral action</span>
+      </div>
+      <div class="manipulator-card__body">
+        <div class="manipulator-card__number">06 · COURSEWORK</div>
+        <h3>Integral-Action Joint Tracking</h3>
+        <p>Joint regulation and trajectory tracking with integral action to reduce steady-state error under constant and time-varying references.</p>
+        <ul><li>Thirty-degree joint regulation</li><li>Step-reference tracking</li><li>Sinusoidal trajectory tracking</li></ul>
+      </div>
+    </article>
+  </div>
+</section>
+
+<style>
+  .manipulator-work { margin: 3.5rem 0; }
+  .manipulator-work__header { max-width: 52rem; margin-bottom: 1.5rem; }
+  .manipulator-work__header--coursework { margin-top: 3.4rem; }
+  .manipulator-work__header h2 { margin: .15rem 0 .55rem; font-size: clamp(1.8rem, 4vw, 2.6rem); }
+  .manipulator-work__header > p:last-child { margin: 0; opacity: .78; }
+  .manipulator-work__eyebrow { margin: 0; color: #38bdf8; font-size: .76rem; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; }
+  .manipulator-work__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.2rem; }
+  .manipulator-card { overflow: hidden; border: 1px solid color-mix(in srgb, currentColor 14%, transparent); border-radius: 1.2rem; background: color-mix(in srgb, currentColor 3%, transparent); }
+  .manipulator-card__media { position: relative; display: grid; min-height: 14rem; place-items: center; overflow: hidden; color: #cfeefa; background: radial-gradient(circle at 50% 35%, #14334a, #07131e 70%); }
+  .manipulator-card__media svg { width: 91%; height: auto; max-height: 12rem; }
+  .manipulator-card__media--image { display: block; background: #f4f7f9; }
+  .manipulator-card__media--image img { display: block; width: 100%; height: 14rem; object-fit: contain; object-position: center; }
+  .manipulator-card__media--plot { background: #07131e; }
+  .manipulator-card__media--plot img { object-fit: contain; background: #07131e; }
+  .manipulator-card__media--reel { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2px; padding: 0; background: #020a12; }
+  .manipulator-card__media--reel figure { position: relative; width: 100%; height: 14rem; margin: 0; overflow: hidden; background: #020a12; }
+  .manipulator-card__media--reel video { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .manipulator-card__media--reel figcaption { position: absolute; bottom: .45rem; left: .45rem; padding: .22rem .4rem; border-radius: .4rem; color: #e0f2fe; background: rgba(2,10,18,.76); font-size: .65rem; font-weight: 700; }
+  .manipulator-card__media > span { position: absolute; right: .8rem; bottom: .7rem; padding: .32rem .55rem; border: 1px solid rgba(125,211,252,.34); border-radius: 999px; color: #bae6fd; background: rgba(2,10,18,.82); font-size: .68rem; letter-spacing: .04em; }
+  .manipulator-card__body { padding: 1.2rem 1.3rem 1.35rem; }
+  .manipulator-card__number { color: #38bdf8; font-size: .78rem; font-weight: 800; letter-spacing: .12em; }
+  .manipulator-card h3 { margin: .35rem 0 .65rem; font-size: 1.35rem; }
+  .manipulator-card p { margin: 0 0 .85rem; opacity: .82; }
+  .manipulator-card ul { margin: 0; padding-left: 1.1rem; font-size: .92rem; opacity: .78; }
+  .manipulator-card li + li { margin-top: .25rem; }
+  .manipulator-card svg path, .manipulator-card svg circle, .manipulator-card svg rect { vector-effect: non-scaling-stroke; }
+  .man-floor, .man-link, .man-arrow, .man-flow, .man-axis, .man-reference, .man-response { fill: none; stroke: #7dd3fc; stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; }
+  .man-link { stroke-width: 15; }.man-arrow { stroke: #fbbf24; stroke-dasharray: 8 7; }.man-joint { fill: #0f2232; stroke: #38bdf8; stroke-width: 6; }.man-tip { fill: #fbbf24; }
+  .man-block { fill: rgba(56,189,248,.13); stroke: #7dd3fc; stroke-width: 5; }.man-block--observer { stroke: #fbbf24; }.man-flow { stroke-width: 4; }.man-axis { stroke-width: 4; }.man-reference { stroke: #f8fafc; stroke-dasharray: 9 8; }.man-response { stroke: #38bdf8; }.man-response--second { stroke: #fbbf24; }
+  .manipulator-card__media text { fill: #e0f2fe; font: 700 20px sans-serif; }
+  @media (max-width: 760px) { .manipulator-work__grid { grid-template-columns: 1fr; }.manipulator-card__media { min-height: 12rem; }.manipulator-card__media--image img { height: 12rem; }.manipulator-card__media--reel figure { height: 12rem; } }
+  @media (prefers-reduced-motion: reduce) { .manipulator-card__media--reel video { display: none; } }
+</style>
