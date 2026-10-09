@@ -18,7 +18,7 @@ This work addresses bilateral vehicle teleoperation when network delay can desta
 ## Engineering contribution
 
 - Developed the MATLAB/Simulink control and comparison workflow.
-- Integrated the research models with an F1TENTH-oriented ROS toolchain.
+- Implemented racing-cockpit teleoperation of the physical F1TENTH platform under significant communication delays, integrating the control workflow with ROS.
 - Preserved a separate offline model for safe reproduction without starting ROS or connecting hardware.
 - Connected the research repository to the companion hardware-launch and ROS-node repository.
 

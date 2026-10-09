@@ -15,4 +15,8 @@ highlights:
 
 This project studies how local vehicle interactions influence formation errors as the number of agents grows. It brings together theoretical notes, offline analyses, simulation models, and hardware experiment records without collapsing distinct platform implementations into one ambiguous runtime folder.
 
-Bounded offline ODE and scalability workflows have passed. ROS/hardware execution and models authored in newer MATLAB releases remain explicitly deferred until the correct environment is available.
+### Experimental implementation
+
+I developed and maintained ROS/C++ control implementations and conducted controller tuning, hardware troubleshooting, and experimental validation. In the F1TENTH CACC experiments, three physical vehicles interact with additional real-time Simulink agents running on a Speedgoat target to evaluate velocity consensus, intervehicle spacing, and string stability.
+
+The cooperative-platform work contributed to a journal submission under review. Ongoing experiments investigate generalized vehicle communication topologies. The preserved offline ODE and scalability workflows have also passed bounded reproduction tests; environment-dependent model reruns are tracked separately from the original hardware experiments.

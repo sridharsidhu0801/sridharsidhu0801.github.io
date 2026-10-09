@@ -1,7 +1,8 @@
 ---
 title: "Autonomous Go-Kart — Modeling, DBW, and SBW"
 date: 2025-01-01
-summary: "A full-vehicle engineering project spanning nonlinear modeling, NMPC simulation, drive-by-wire, steer-by-wire, wiring, and hardware integration."
+lastmod: 2026-10-09
+summary: "ROS 2 vehicle control on Jetson Orin Nano: embedded steering PID, PI cruise control, vehicle modeling, safety watchdogs, and a torque-driven steering redesign."
 tags: [Control Systems, Robotics, Hardware]
 tech_stack: [MATLAB, Simulink, NMPC, ROS 2, NVIDIA Jetson, Arduino]
 featured: true
@@ -9,10 +10,14 @@ status: "Engineering platform"
 role: "Controls and integration engineer"
 highlights:
   - "Nonlinear vehicle model and NMPC workflow"
-  - "Drive-by-wire and steer-by-wire subsystem design"
-  - "Hardware, wiring, and component-level documentation"
+  - "Embedded steering PID and longitudinal PI cruise control"
+  - "Command watchdog, steering calibration, and mechanical torque redesign"
 ---
 
-The autonomous go-kart project connects vehicle-dynamics modeling with the practical constraints of a full-size experimental platform. The organized project contains an active NMPC simulation workflow, retained model lineage, drive- and steer-by-wire design evidence, controller manuals, wiring diagrams, and hardware photographs.
+I integrated a ROS 2 control architecture running on an NVIDIA Jetson Orin Nano with the drive-by-wire and steer-by-wire systems of a full-size experimental go-kart. My ownership covered control logic, vehicle dynamics modeling, embedded steering control, longitudinal cruise control, and integration with the steering and propulsion hardware.
 
-My work focused on control-system development and the software/hardware boundary: actuator feedback, steering and propulsion interfaces, embedded controllers, Jetson-based computing, and ROS 2 integration planning.
+The project connects MATLAB/Simulink controller development with physical testing, feedback timing, actuator initialization, and mechanical reliability. The modules below describe the engineering work and the problems resolved during testing.
+
+{{< gokart-control-projects >}}
+
+**Collaboration:** My colleague implemented the Raspberry Pi Pico micro-ROS node that reads VESC motor-encoder feedback and publishes it to the Jetson. I developed the control logic and its integration with the vehicle steering and propulsion systems.

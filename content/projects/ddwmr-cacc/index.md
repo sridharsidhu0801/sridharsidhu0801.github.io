@@ -15,4 +15,8 @@ highlights:
 
 This body of work uses differential-drive robots as a bridge between mobile-robot autonomy and networked vehicle control. It covers mapping and navigation, trajectory tracking, model parameter estimation, and cooperative longitudinal behavior.
 
-The current ResearchOS organization distinguishes active scientific material, hardware evidence, vendor/courseware dependencies, and ROS-gated lineage so that old network-connected scripts are not mistaken for safe offline entry points.
+### Distributed control on physical robots
+
+I developed C++ ROS nodes that receive neighboring robot states, compute local commands for consensus or formation objectives, and execute those commands on the robot. I configured launch files to coordinate the nodes required for multi-robot experiments across QBot, TurtleBot, and F1TENTH platforms.
+
+My experimental work includes multi-QBot formation control under communication delays and cooperative vehicle-following studies. I use MATLAB to analyze ROS bag data and generate experimental comparisons and publication figures.

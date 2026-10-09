@@ -2,7 +2,7 @@
   <header class="manipulator-work__header">
     <p class="manipulator-work__eyebrow">Platform integration</p>
     <h2 id="manipulator-work-title">SCHUNK LWA4D Platform</h2>
-    <p>Three evidence-backed projects covering the physical platform, simulated motion planning, and the communication layer required to connect ROS controllers to the robot hardware.</p>
+    <p>Three connected projects spanning platform integration, simulation and motion planning, and closed-loop control of the physical robot.</p>
   </header>
 
   <div class="manipulator-work__grid">
@@ -42,13 +42,13 @@
       <div class="manipulator-card__media manipulator-card__media--image">
         {{- $can := .Page.Resources.GetMatch "hardware/canopen-architecture.png" -}}
         {{- if $can }}<img src="{{ $can.RelPermalink }}" alt="ROS CANopen software architecture for connecting controllers to manipulator hardware" loading="lazy">{{- end }}
-        <span>Interface investigation · connection unresolved</span>
+        <span>Physical joint feedback and closed-loop control</span>
       </div>
       <div class="manipulator-card__body">
         <div class="manipulator-card__number">03 · HARDWARE INTERFACE</div>
-        <h3>ROS-Control and CAN Communication</h3>
-        <p>Investigation of the software and hardware path from ROS controllers through SocketCAN and CANopen to the manipulator’s PowerCube modules.</p>
-        <ul><li>Position, velocity, and joint-state interfaces</li><li>CAN-USB driver and PowerCube evaluation</li><li>Communication diagnosis and integration limits</li></ul>
+        <h3>Physical Joint-Space PID Control</h3>
+        <p>C++ PID control in ROS Melodic connects MoveIt joint targets with actual joint-position feedback and corrective commands to the physical SCHUNK arm.</p>
+        <ul><li>Real-time feedback and bidirectional hardware communication</li><li>Legacy CAN interface replaced with ESD CAN-USB</li><li>PowerCube initialization enabled physical motion</li></ul>
       </div>
     </article>
   </div>
