@@ -20,4 +20,3 @@ The project connects MATLAB/Simulink controller development with physical testin
 
 {{< gokart-control-projects >}}
 
-**Collaboration:** My colleague implemented the Raspberry Pi Pico micro-ROS node that reads VESC motor-encoder feedback and publishes it to the Jetson. I developed the control logic and its integration with the vehicle steering and propulsion systems.
