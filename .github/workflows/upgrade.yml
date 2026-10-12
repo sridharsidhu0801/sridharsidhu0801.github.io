@@ -11,10 +11,6 @@ on:
         options:
         - Stable
         - Beta (Preview)
-  schedule:
-    # Run at 05:00 on Monday
-    - cron: '0 5 * * 1'
-
 permissions:
   contents: write
   pull-requests: write
@@ -44,7 +40,6 @@ jobs:
       - name: Setup pnpm
         uses: pnpm/action-setup@v6
         with:
-          package_json_path: ./package.json
           run_install: false
 
       - name: Setup Go
